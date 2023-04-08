@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flylog"
+version = "0.2.6"
+authors = [{name = "dantezhu", email = "zny2008@gmail.com"}]
+license = {text = "BSD"}
+description = "make log fly to mail or other"
+urls = {Homepage = "https://github.com/dantezhu/flylog"}
+dependencies = ["requests"]
+
+[tool.setuptools]
+zip-safe = false
+script-files = ["flylog/bin/run_flylog.py"]
+platforms = ["any"]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+exclude = ["ez_setup"] # examples; tests
+namespaces = false
